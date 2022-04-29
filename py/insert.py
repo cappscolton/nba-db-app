@@ -10,20 +10,17 @@ conn = pyodbc.connect(conn_str)
  
 cursor = conn.cursor()
 
-with open("games.json", "r", encoding='utf-8') as read_file:
-    data = json.load(read_file)
+def insertJsonWithProcedure(fileName, procName):
+    with open('json/' + fileName, "r", encoding='utf-8') as read_file:
+        data = json.load(read_file)
+        json_string = json.dumps(data)      # convert json object to string     
+        cursor.execute('EXEC ' + procName + ' @json = ?', json_string)
+        conn.commit()
+        print('inserted ' + fileName)
 
-# convert json object to string
-    json_string = json.dumps(data) 
-    try:        
-        cursor = conn.cursor()
-        cursor.execute('EXEC prcInsertGames @json = ?', json_string)
-        print('inserted data')    
 
-    except pyodbc.Error as err:
-        print('Error !!!!! %s' % err)
-    except:
-        print('something else failed miserably')
+#insertJsonWithProcedure('teams.json', 'prcInsertTeams')
+#insertJsonWithProcedure('games.json', 'prcInsertGames')
+insertJsonWithProcedure('teamplayergames.json', 'prcInsertGameTeamPlayers')
 
-    conn.close()
-    print('closed db connection')
+conn.close()
