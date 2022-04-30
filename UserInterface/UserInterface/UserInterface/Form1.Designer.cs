@@ -74,6 +74,7 @@
             this.uxLookupPlayer.TabIndex = 3;
             this.uxLookupPlayer.Text = "Lookup Player";
             this.uxLookupPlayer.UseVisualStyleBackColor = true;
+            this.uxLookupPlayer.Click += new System.EventHandler(this.uxLookupPlayer_Click);
             // 
             // uxLookupTeam
             // 
@@ -126,6 +127,7 @@
             this.Controls.Add(this.uxTitelLabel);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
