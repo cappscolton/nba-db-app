@@ -35,12 +35,14 @@
             this.uxLookupTeam = new System.Windows.Forms.Button();
             this.uxAddEditGame = new System.Windows.Forms.Button();
             this.uxLookupGame = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // uxTitelLabel
             // 
             this.uxTitelLabel.AutoSize = true;
-            this.uxTitelLabel.Location = new System.Drawing.Point(64, 9);
+            this.uxTitelLabel.Location = new System.Drawing.Point(12, 9);
             this.uxTitelLabel.Name = "uxTitelLabel";
             this.uxTitelLabel.Size = new System.Drawing.Size(123, 15);
             this.uxTitelLabel.TabIndex = 0;
@@ -48,7 +50,7 @@
             // 
             // uxAddEditPlayer
             // 
-            this.uxAddEditPlayer.Location = new System.Drawing.Point(64, 42);
+            this.uxAddEditPlayer.Location = new System.Drawing.Point(12, 42);
             this.uxAddEditPlayer.Name = "uxAddEditPlayer";
             this.uxAddEditPlayer.Size = new System.Drawing.Size(123, 23);
             this.uxAddEditPlayer.TabIndex = 1;
@@ -57,7 +59,7 @@
             // 
             // uxAddEditTeam
             // 
-            this.uxAddEditTeam.Location = new System.Drawing.Point(64, 100);
+            this.uxAddEditTeam.Location = new System.Drawing.Point(12, 100);
             this.uxAddEditTeam.Name = "uxAddEditTeam";
             this.uxAddEditTeam.Size = new System.Drawing.Size(123, 23);
             this.uxAddEditTeam.TabIndex = 2;
@@ -66,7 +68,7 @@
             // 
             // uxLookupPlayer
             // 
-            this.uxLookupPlayer.Location = new System.Drawing.Point(64, 71);
+            this.uxLookupPlayer.Location = new System.Drawing.Point(12, 71);
             this.uxLookupPlayer.Name = "uxLookupPlayer";
             this.uxLookupPlayer.Size = new System.Drawing.Size(123, 23);
             this.uxLookupPlayer.TabIndex = 3;
@@ -75,7 +77,7 @@
             // 
             // uxLookupTeam
             // 
-            this.uxLookupTeam.Location = new System.Drawing.Point(64, 129);
+            this.uxLookupTeam.Location = new System.Drawing.Point(12, 129);
             this.uxLookupTeam.Name = "uxLookupTeam";
             this.uxLookupTeam.Size = new System.Drawing.Size(123, 23);
             this.uxLookupTeam.TabIndex = 4;
@@ -84,7 +86,7 @@
             // 
             // uxAddEditGame
             // 
-            this.uxAddEditGame.Location = new System.Drawing.Point(64, 158);
+            this.uxAddEditGame.Location = new System.Drawing.Point(12, 158);
             this.uxAddEditGame.Name = "uxAddEditGame";
             this.uxAddEditGame.Size = new System.Drawing.Size(123, 23);
             this.uxAddEditGame.TabIndex = 5;
@@ -93,18 +95,28 @@
             // 
             // uxLookupGame
             // 
-            this.uxLookupGame.Location = new System.Drawing.Point(64, 187);
+            this.uxLookupGame.Location = new System.Drawing.Point(12, 187);
             this.uxLookupGame.Name = "uxLookupGame";
             this.uxLookupGame.Size = new System.Drawing.Size(123, 23);
             this.uxLookupGame.TabIndex = 6;
             this.uxLookupGame.Text = "Lookup Game";
             this.uxLookupGame.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(141, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(576, 404);
+            this.dataGridView1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(254, 226);
+            this.ClientSize = new System.Drawing.Size(729, 428);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.uxLookupGame);
             this.Controls.Add(this.uxAddEditGame);
             this.Controls.Add(this.uxLookupTeam);
@@ -114,6 +126,7 @@
             this.Controls.Add(this.uxTitelLabel);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,5 +141,6 @@
         private Button uxLookupTeam;
         private Button uxAddEditGame;
         private Button uxLookupGame;
+        private DataGridView dataGridView1;
     }
 }
