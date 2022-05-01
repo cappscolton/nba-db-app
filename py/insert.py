@@ -18,7 +18,7 @@ def insertJsonWithProcedure(fileName, procName):
         conn.commit()
         print('inserted ' + fileName)
 
-
+#insertJsonWithProcedure('players.json', 'prcInsertPlayers')
 #insertJsonWithProcedure('teams.json', 'prcInsertTeams')
 #insertJsonWithProcedure('games.json', 'prcInsertGames')
 insertJsonWithProcedure('teamplayergames.json', 'prcInsertGameTeamPlayers')
