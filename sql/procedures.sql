@@ -35,19 +35,42 @@ END
 GO
 
 
-CREATE OR ALTER Procedure [dbo].[prcInsertGameTeamPlayers]
+CREATE OR ALTER  Procedure [dbo].[prcInsertGameTeamPlayers]
 (@json VARCHAR(MAX) = '')
 AS
 BEGIN
 SET IDENTITY_INSERT NBA.GameTeamPlayer OFF
+<<<<<<< HEAD
 INSERT INTO NBA.GameTeamPlayer (TeamId, GameId, PlayerId, PointsScored)
 SELECT TeamId, GameId, PlayerId, PointsScored
+=======
+INSERT INTO NBA.GameTeamPlayer (TeamId, GameId, PlayerId, PointsScored, PlusMinus,
+								[Minutes], FGM, FGA, FG3M, FG3A, FTM, FTA, OREB, DREB,
+								Assists, Turnovers, Blocks, Fouls)
+SELECT TeamId, GameId, PlayerId, PointsScored, PlusMinus,
+		[Minutes], FGM, FGA, FG3M, FG3A, FTM, FTA, OREB, DREB,
+		Assists, Turnovers, Blocks, Fouls
+>>>>>>> origin/schemaV3-changes
 	FROM OPENJSON(@json)
 	WITH (
 		TeamId INT '$.TEAM_ID',
 		GameId NVARCHAR(32) '$.GAME_ID',
         PlayerId NVARCHAR(32) '$.PLAYER_ID',
-        PointsScored INT '$.PTS'
+        PointsScored INT '$.PTS',
+        PlusMinus INT '$.PLUS_MINUS',
+        [Minutes] INT '$.MIN',
+        FGM INT '$.FGM',
+        FGA INT '$.FGA',
+        FG3M INT '$.FG3M',
+        FG3A INT '$.FG3A',
+        FTM INT '$.FTM',
+        FTA INT '$.FTA',
+        OREB INT '$.OREB',
+        DREB INT '$.DREB',
+        Assists INT '$.AST',
+        Turnovers INT '$.TOV',
+        Blocks INT '$.BLK',
+        Fouls INT '$.PF'
 	    )
 END
 GO
