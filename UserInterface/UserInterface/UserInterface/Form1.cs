@@ -56,5 +56,11 @@ namespace UserInterface
             ViewGame game = new ViewGame();
             game.Show();
         }
+
+        private void uxLookupTeam_Click(object sender, EventArgs e)
+        {
+            ViewTeam team = new ViewTeam();
+            team.Show();
+        }
     }
 }

@@ -86,6 +86,7 @@
             this.uxLookupTeam.TabIndex = 4;
             this.uxLookupTeam.Text = "Lookup Team";
             this.uxLookupTeam.UseVisualStyleBackColor = true;
+            this.uxLookupTeam.Click += new System.EventHandler(this.uxLookupTeam_Click);
             // 
             // uxAddEditGame
             // 
