@@ -37,7 +37,7 @@
             this.uxHomeScoreVal = new System.Windows.Forms.NumericUpDown();
             this.uxAwayScoreVal = new System.Windows.Forms.NumericUpDown();
             this.uxDate = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.uxDateSelect = new System.Windows.Forms.DateTimePicker();
             this.uxSeasonSelect = new System.Windows.Forms.ComboBox();
             this.uxSeason = new System.Windows.Forms.Label();
             this.uxCancel = new System.Windows.Forms.Button();
@@ -131,14 +131,14 @@
             this.uxDate.TabIndex = 8;
             this.uxDate.Text = "Date Played:";
             // 
-            // dateTimePicker1
+            // uxDateSelect
             // 
-            this.dateTimePicker1.CustomFormat = "dd MMM yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(90, 127);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(148, 23);
-            this.dateTimePicker1.TabIndex = 9;
+            this.uxDateSelect.CustomFormat = "dd MMM yyyy";
+            this.uxDateSelect.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.uxDateSelect.Location = new System.Drawing.Point(90, 127);
+            this.uxDateSelect.Name = "uxDateSelect";
+            this.uxDateSelect.Size = new System.Drawing.Size(148, 23);
+            this.uxDateSelect.TabIndex = 9;
             // 
             // uxSeasonSelect
             // 
@@ -184,7 +184,7 @@
             this.Controls.Add(this.uxCancel);
             this.Controls.Add(this.uxSeasonSelect);
             this.Controls.Add(this.uxSeason);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.uxDateSelect);
             this.Controls.Add(this.uxDate);
             this.Controls.Add(this.uxAwayScoreVal);
             this.Controls.Add(this.uxHomeScoreVal);
@@ -214,7 +214,7 @@
         private NumericUpDown uxHomeScoreVal;
         private NumericUpDown uxAwayScoreVal;
         private Label uxDate;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker uxDateSelect;
         private ComboBox uxSeasonSelect;
         private Label uxSeason;
         private Button uxCancel;
