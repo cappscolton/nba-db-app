@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace UserInterface
 {
@@ -45,6 +46,7 @@ namespace UserInterface
             homeScore = Convert.ToInt32(homeDataTable.Rows[0].ItemArray[0]);
             awayScore = Convert.ToInt32(awayDataTable.Rows[0].ItemArray[0]);
             season = (string)homeDataTable.Rows[0].ItemArray[1];
+            date = date.Replace("+00:00", "-6:00");
 
 
             InitializeComponent();
