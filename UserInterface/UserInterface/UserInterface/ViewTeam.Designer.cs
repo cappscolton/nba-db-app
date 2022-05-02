@@ -170,7 +170,7 @@
             // 
             this.FirstName.Tag = "First Name";
             this.FirstName.Text = "First Name";
-            this.FirstName.Width = 150;
+            this.FirstName.Width = 100;
             // 
             // LastName
             // 
@@ -182,6 +182,7 @@
             // 
             this.Position.Tag = "Position";
             this.Position.Text = "Position";
+            this.Position.Width = 140;
             // 
             // uxExit
             // 

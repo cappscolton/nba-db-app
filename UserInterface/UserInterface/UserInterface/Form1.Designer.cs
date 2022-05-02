@@ -56,6 +56,7 @@
             this.uxAddEditPlayer.TabIndex = 1;
             this.uxAddEditPlayer.Text = "Add/Edit Player";
             this.uxAddEditPlayer.UseVisualStyleBackColor = true;
+            this.uxAddEditPlayer.Click += new System.EventHandler(this.uxAddEditPlayer_Click);
             // 
             // uxAddEditTeam
             // 

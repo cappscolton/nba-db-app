@@ -36,6 +36,8 @@
             this.uxAddPlayer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.uxTeamComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.uxPosition = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -74,7 +76,7 @@
             // 
             // uxExit
             // 
-            this.uxExit.Location = new System.Drawing.Point(12, 102);
+            this.uxExit.Location = new System.Drawing.Point(11, 144);
             this.uxExit.Name = "uxExit";
             this.uxExit.Size = new System.Drawing.Size(75, 23);
             this.uxExit.TabIndex = 4;
@@ -85,7 +87,7 @@
             // uxAddPlayer
             // 
             this.uxAddPlayer.Enabled = false;
-            this.uxAddPlayer.Location = new System.Drawing.Point(93, 102);
+            this.uxAddPlayer.Location = new System.Drawing.Point(92, 144);
             this.uxAddPlayer.Name = "uxAddPlayer";
             this.uxAddPlayer.Size = new System.Drawing.Size(148, 23);
             this.uxAddPlayer.TabIndex = 5;
@@ -110,11 +112,29 @@
             this.uxTeamComboBox.Size = new System.Drawing.Size(155, 23);
             this.uxTeamComboBox.TabIndex = 7;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 15);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Position:";
+            // 
+            // uxPosition
+            // 
+            this.uxPosition.Location = new System.Drawing.Point(85, 103);
+            this.uxPosition.Name = "uxPosition";
+            this.uxPosition.Size = new System.Drawing.Size(100, 23);
+            this.uxPosition.TabIndex = 9;
+            // 
             // AddEditPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 134);
+            this.ClientSize = new System.Drawing.Size(252, 222);
+            this.Controls.Add(this.uxPosition);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.uxTeamComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxAddPlayer);
@@ -140,5 +160,7 @@
         private Button uxAddPlayer;
         private Label label1;
         private ComboBox uxTeamComboBox;
+        private Label label2;
+        private TextBox uxPosition;
     }
 }
