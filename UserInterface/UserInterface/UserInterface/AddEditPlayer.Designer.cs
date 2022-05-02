@@ -34,6 +34,8 @@
             this.uxLastName = new System.Windows.Forms.TextBox();
             this.uxExit = new System.Windows.Forms.Button();
             this.uxAddPlayer = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.uxTeamComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -72,7 +74,7 @@
             // 
             // uxExit
             // 
-            this.uxExit.Location = new System.Drawing.Point(12, 77);
+            this.uxExit.Location = new System.Drawing.Point(12, 102);
             this.uxExit.Name = "uxExit";
             this.uxExit.Size = new System.Drawing.Size(75, 23);
             this.uxExit.TabIndex = 4;
@@ -83,19 +85,38 @@
             // uxAddPlayer
             // 
             this.uxAddPlayer.Enabled = false;
-            this.uxAddPlayer.Location = new System.Drawing.Point(93, 77);
+            this.uxAddPlayer.Location = new System.Drawing.Point(93, 102);
             this.uxAddPlayer.Name = "uxAddPlayer";
             this.uxAddPlayer.Size = new System.Drawing.Size(148, 23);
             this.uxAddPlayer.TabIndex = 5;
-            this.uxAddPlayer.Text = "Add Player";
+            this.uxAddPlayer.Text = "Confirm";
             this.uxAddPlayer.UseVisualStyleBackColor = true;
             this.uxAddPlayer.Click += new System.EventHandler(this.uxAddPlayer_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Team:";
+            // 
+            // uxTeamComboBox
+            // 
+            this.uxTeamComboBox.FormattingEnabled = true;
+            this.uxTeamComboBox.Location = new System.Drawing.Point(85, 70);
+            this.uxTeamComboBox.Name = "uxTeamComboBox";
+            this.uxTeamComboBox.Size = new System.Drawing.Size(155, 23);
+            this.uxTeamComboBox.TabIndex = 7;
             // 
             // AddEditPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 112);
+            this.ClientSize = new System.Drawing.Size(252, 134);
+            this.Controls.Add(this.uxTeamComboBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.uxAddPlayer);
             this.Controls.Add(this.uxExit);
             this.Controls.Add(this.uxLastName);
@@ -117,5 +138,7 @@
         private TextBox uxLastName;
         private Button uxExit;
         private Button uxAddPlayer;
+        private Label label1;
+        private ComboBox uxTeamComboBox;
     }
 }

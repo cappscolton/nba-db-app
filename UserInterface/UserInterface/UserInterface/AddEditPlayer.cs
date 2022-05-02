@@ -12,9 +12,16 @@ namespace UserInterface
 {
     public partial class AddEditPlayer : Form
     {
-        public AddEditPlayer()
+        public AddEditPlayer() // add constructor
         {
             InitializeComponent();
+        }
+
+        public AddEditPlayer(int playerId, string firstName, string lastName, string teamId) // edit constructor
+        {
+            InitializeComponent();
+            uxFirstName.Text = firstName;
+            uxLastName.Text = lastName;
         }
 
         private void EnableCompleteButton(object sender, EventArgs e)

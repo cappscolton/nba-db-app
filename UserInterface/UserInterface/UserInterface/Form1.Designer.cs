@@ -35,10 +35,8 @@
             this.uxLookupTeam = new System.Windows.Forms.Button();
             this.uxAddEditGame = new System.Windows.Forms.Button();
             this.uxLookupGame = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.uxLookup = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // uxTitelLabel
@@ -70,7 +68,7 @@
             // 
             // uxLookupPlayer
             // 
-            this.uxLookupPlayer.Location = new System.Drawing.Point(12, 71);
+            this.uxLookupPlayer.Location = new System.Drawing.Point(247, 30);
             this.uxLookupPlayer.Name = "uxLookupPlayer";
             this.uxLookupPlayer.Size = new System.Drawing.Size(123, 23);
             this.uxLookupPlayer.TabIndex = 3;
@@ -106,22 +104,13 @@
             this.uxLookupGame.UseVisualStyleBackColor = true;
             this.uxLookupGame.Click += new System.EventHandler(this.uxLookupGame_Click);
             // 
-            // dataGridView1
+            // uxLookup
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(141, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(576, 404);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 226);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 8;
+            this.uxLookup.FormattingEnabled = true;
+            this.uxLookup.Location = new System.Drawing.Point(376, 31);
+            this.uxLookup.Name = "uxLookup";
+            this.uxLookup.Size = new System.Drawing.Size(121, 23);
+            this.uxLookup.TabIndex = 8;
             // 
             // comboBox2
             // 
@@ -137,8 +126,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 428);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.uxLookup);
             this.Controls.Add(this.uxLookupGame);
             this.Controls.Add(this.uxAddEditGame);
             this.Controls.Add(this.uxLookupTeam);
@@ -149,7 +137,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,8 +151,7 @@
         private Button uxLookupTeam;
         private Button uxAddEditGame;
         private Button uxLookupGame;
-        private DataGridView dataGridView1;
-        private ComboBox comboBox1;
+        private ComboBox uxLookup;
         private ComboBox comboBox2;
     }
 }

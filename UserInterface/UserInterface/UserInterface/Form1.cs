@@ -24,9 +24,9 @@ namespace UserInterface
             DataTable dtbl = new DataTable();
             sqlDa.Fill(dtbl);
                 
-            comboBox1.DataSource = dtbl;
-            comboBox1.DisplayMember = "Name";
-            comboBox1.ValueMember = "PlayerId";
+            uxLookup.DataSource = dtbl;
+            uxLookup.DisplayMember = "Name";
+            uxLookup.ValueMember = "PlayerId";
 
             SqlDataAdapter sqlDa1 = new SqlDataAdapter("SELECT S.SeasonScheduleId, S.SeasonYear FROM NBA.SeasonSchedule S", DBConnection.conn);
             DataTable dtbl1 = new DataTable();
@@ -44,11 +44,17 @@ namespace UserInterface
 
         private void uxLookupPlayer_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM NBA.Player P WHERE P.PlayerId = 2544", DBConnection.conn);
+            int playerId = (int)uxLookup.SelectedValue;
+            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT P.FirstName, P.LastName FROM NBA.Player P WHERE P.PlayerId = @playerId", DBConnection.conn); //todo add more col
+            sqlDa.SelectCommand.Parameters.AddWithValue("@playerId", playerId);
             DataTable dtbl = new DataTable();
             sqlDa.Fill(dtbl);
+            string firstName = (string)dtbl.Rows[0].ItemArray[0];
+            string lastName = (string)dtbl.Rows[0].ItemArray[1];
 
-            dataGridView1.DataSource = dtbl;
+            ViewPlayer viewPlayer = new ViewPlayer(playerId, firstName, lastName);
+            viewPlayer.Show();
+
         }
 
         private void uxLookupGame_Click(object sender, EventArgs e)

@@ -16,9 +16,6 @@ namespace UserInterface
     {
         int homeScore;
         int awayScore;
-        string homeTeamName;
-        string awayTeamName;
-        string date;
         string season;
         public ViewGameDisplay(string homeTeam, string awayTeam, string date, int gameId)
         {
