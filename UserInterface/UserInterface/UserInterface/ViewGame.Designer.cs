@@ -36,6 +36,7 @@
             this.uxDisplayButton = new System.Windows.Forms.Button();
             this.uxExit = new System.Windows.Forms.Button();
             this.uxReset = new System.Windows.Forms.Button();
+            this.uxEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxAwaySelect
@@ -89,9 +90,9 @@
             // uxDisplayButton
             // 
             this.uxDisplayButton.Enabled = false;
-            this.uxDisplayButton.Location = new System.Drawing.Point(138, 117);
+            this.uxDisplayButton.Location = new System.Drawing.Point(11, 146);
             this.uxDisplayButton.Name = "uxDisplayButton";
-            this.uxDisplayButton.Size = new System.Drawing.Size(146, 23);
+            this.uxDisplayButton.Size = new System.Drawing.Size(272, 23);
             this.uxDisplayButton.TabIndex = 10;
             this.uxDisplayButton.Text = "Show Information";
             this.uxDisplayButton.UseVisualStyleBackColor = true;
@@ -109,7 +110,7 @@
             // 
             // uxReset
             // 
-            this.uxReset.Location = new System.Drawing.Point(75, 117);
+            this.uxReset.Location = new System.Drawing.Point(76, 117);
             this.uxReset.Name = "uxReset";
             this.uxReset.Size = new System.Drawing.Size(57, 23);
             this.uxReset.TabIndex = 28;
@@ -117,11 +118,23 @@
             this.uxReset.UseVisualStyleBackColor = true;
             this.uxReset.Click += new System.EventHandler(this.RestoreDefaults);
             // 
+            // uxEdit
+            // 
+            this.uxEdit.Enabled = false;
+            this.uxEdit.Location = new System.Drawing.Point(139, 117);
+            this.uxEdit.Name = "uxEdit";
+            this.uxEdit.Size = new System.Drawing.Size(145, 23);
+            this.uxEdit.TabIndex = 29;
+            this.uxEdit.Text = "Edit Information";
+            this.uxEdit.UseVisualStyleBackColor = true;
+            this.uxEdit.Click += new System.EventHandler(this.uxEdit_Click);
+            // 
             // ViewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 154);
+            this.ClientSize = new System.Drawing.Size(295, 177);
+            this.Controls.Add(this.uxEdit);
             this.Controls.Add(this.uxReset);
             this.Controls.Add(this.uxExit);
             this.Controls.Add(this.uxDisplayButton);
@@ -147,5 +160,6 @@
         private Button uxDisplayButton;
         private Button uxExit;
         private Button uxReset;
+        private Button uxEdit;
     }
 }
