@@ -44,6 +44,7 @@ namespace UserInterface
         {
             ViewGameDisplay viewGameDisplay = new ViewGameDisplay(uxHomeSelect.Text, uxAwaySelect.Text, uxDateSelect.Text, (int)uxDateSelect.SelectedValue); // todo pass ids to constructor
             viewGameDisplay.Show();
+            this.Close();
         }
 
         private void EnableFormControls(object sender, EventArgs e)
@@ -76,6 +77,7 @@ namespace UserInterface
                     if(uxDateSelect.SelectedItem != null)//if the date is selected
                     {
                         uxDateSelect.Enabled = false;
+                        uxEdit.Enabled = true;
                         uxDisplayButton.Enabled = true;//allow query through
                     }
                 }
@@ -87,6 +89,13 @@ namespace UserInterface
             ViewGame newView = new ViewGame();
             newView.Show();
             this.Dispose(false);
+        }
+
+        private void uxEdit_Click(object sender, EventArgs e)
+        {
+            AddEditGame editGame = new AddEditGame(uxHomeSelect.Text, uxAwaySelect.Text, uxDateSelect.Text, (int)uxDateSelect.SelectedValue);
+            editGame.Show();
+            this.Close();
         }
     }
 }

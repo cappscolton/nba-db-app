@@ -12,6 +12,7 @@ namespace UserInterface
 {
     public partial class AddEditGame : Form
     {
+        bool isEdit = false;
         public AddEditGame()
         {
             InitializeComponent();
@@ -22,8 +23,24 @@ namespace UserInterface
             //uxSeasonSelect??
         }
 
+        public AddEditGame(string homeTeam, string awayTeam, string date, int gameId)
+        {
+            isEdit = true;
+            uxComplete.Enabled = true;
+
+            InitializeComponent();
+            //set up data context here
+        }
+
         private void uxComplete_Click(object sender, EventArgs e)
         {
+            if(isEdit)
+            {
+                //update query entry
+                this.Close();//close out of the form (method terminates)
+            }
+
+
             //Values for the queries will be stored in:
             //uxHomeSelect
             //uxAwaySelect
