@@ -104,6 +104,7 @@
             this.uxLookupGame.TabIndex = 6;
             this.uxLookupGame.Text = "Lookup Game";
             this.uxLookupGame.UseVisualStyleBackColor = true;
+            this.uxLookupGame.Click += new System.EventHandler(this.uxLookupGame_Click);
             // 
             // dataGridView1
             // 
