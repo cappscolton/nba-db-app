@@ -12,10 +12,6 @@ using System.Windows.Forms;
 
 namespace UserInterface
 {
-    public static class DBConnection
-    {
-        public static SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog = NBA;Trusted_Connection=yes;");
-    }
     public partial class Form1 : Form
     {
         public Form1()
