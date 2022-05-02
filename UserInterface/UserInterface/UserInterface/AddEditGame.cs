@@ -26,6 +26,7 @@ namespace UserInterface
         public AddEditGame(string homeTeam, string awayTeam, string date, int gameId)
         {
             isEdit = true;
+            uxComplete.Enabled = true;
 
             InitializeComponent();
             //set up data context here
