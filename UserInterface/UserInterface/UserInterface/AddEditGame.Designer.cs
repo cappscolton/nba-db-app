@@ -80,6 +80,7 @@
             this.uxHomeSelect.Name = "uxHomeSelect";
             this.uxHomeSelect.Size = new System.Drawing.Size(121, 23);
             this.uxHomeSelect.TabIndex = 3;
+            this.uxHomeSelect.SelectionChangeCommitted += new System.EventHandler(this.EnableCompleteButton);
             // 
             // uxAwaySelect
             // 
@@ -88,6 +89,7 @@
             this.uxAwaySelect.Name = "uxAwaySelect";
             this.uxAwaySelect.Size = new System.Drawing.Size(121, 23);
             this.uxAwaySelect.TabIndex = 4;
+            this.uxAwaySelect.SelectionChangeCommitted += new System.EventHandler(this.EnableCompleteButton);
             // 
             // uxAwayScore
             // 
@@ -147,6 +149,7 @@
             this.uxSeasonSelect.Name = "uxSeasonSelect";
             this.uxSeasonSelect.Size = new System.Drawing.Size(121, 23);
             this.uxSeasonSelect.TabIndex = 11;
+            this.uxSeasonSelect.SelectionChangeCommitted += new System.EventHandler(this.EnableCompleteButton);
             // 
             // uxSeason
             // 
@@ -168,12 +171,14 @@
             // 
             // uxComplete
             // 
+            this.uxComplete.Enabled = false;
             this.uxComplete.Location = new System.Drawing.Point(437, 204);
             this.uxComplete.Name = "uxComplete";
             this.uxComplete.Size = new System.Drawing.Size(75, 23);
             this.uxComplete.TabIndex = 13;
             this.uxComplete.Text = "Complete";
             this.uxComplete.UseVisualStyleBackColor = true;
+            this.uxComplete.Click += new System.EventHandler(this.uxComplete_Click);
             // 
             // AddEditGame
             // 
