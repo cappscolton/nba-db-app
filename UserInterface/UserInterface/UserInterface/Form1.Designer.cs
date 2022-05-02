@@ -30,10 +30,8 @@
         {
             this.uxTitelLabel = new System.Windows.Forms.Label();
             this.uxAddEditPlayer = new System.Windows.Forms.Button();
-            this.uxAddEditTeam = new System.Windows.Forms.Button();
             this.uxLookupPlayer = new System.Windows.Forms.Button();
             this.uxLookupTeam = new System.Windows.Forms.Button();
-            this.uxAddEditGame = new System.Windows.Forms.Button();
             this.uxLookupGame = new System.Windows.Forms.Button();
             this.uxLookup = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -57,15 +55,6 @@
             this.uxAddEditPlayer.UseVisualStyleBackColor = true;
             this.uxAddEditPlayer.Click += new System.EventHandler(this.uxAddEditPlayer_Click);
             // 
-            // uxAddEditTeam
-            // 
-            this.uxAddEditTeam.Location = new System.Drawing.Point(12, 60);
-            this.uxAddEditTeam.Name = "uxAddEditTeam";
-            this.uxAddEditTeam.Size = new System.Drawing.Size(123, 23);
-            this.uxAddEditTeam.TabIndex = 2;
-            this.uxAddEditTeam.Text = "Add Team";
-            this.uxAddEditTeam.UseVisualStyleBackColor = true;
-            // 
             // uxLookupPlayer
             // 
             this.uxLookupPlayer.Location = new System.Drawing.Point(141, 31);
@@ -86,18 +75,9 @@
             this.uxLookupTeam.UseVisualStyleBackColor = true;
             this.uxLookupTeam.Click += new System.EventHandler(this.uxLookupTeam_Click);
             // 
-            // uxAddEditGame
-            // 
-            this.uxAddEditGame.Location = new System.Drawing.Point(12, 89);
-            this.uxAddEditGame.Name = "uxAddEditGame";
-            this.uxAddEditGame.Size = new System.Drawing.Size(123, 23);
-            this.uxAddEditGame.TabIndex = 5;
-            this.uxAddEditGame.Text = "Add Game";
-            this.uxAddEditGame.UseVisualStyleBackColor = true;
-            // 
             // uxLookupGame
             // 
-            this.uxLookupGame.Location = new System.Drawing.Point(141, 89);
+            this.uxLookupGame.Location = new System.Drawing.Point(12, 60);
             this.uxLookupGame.Name = "uxLookupGame";
             this.uxLookupGame.Size = new System.Drawing.Size(123, 23);
             this.uxLookupGame.TabIndex = 6;
@@ -120,10 +100,8 @@
             this.ClientSize = new System.Drawing.Size(412, 129);
             this.Controls.Add(this.uxLookup);
             this.Controls.Add(this.uxLookupGame);
-            this.Controls.Add(this.uxAddEditGame);
             this.Controls.Add(this.uxLookupTeam);
             this.Controls.Add(this.uxLookupPlayer);
-            this.Controls.Add(this.uxAddEditTeam);
             this.Controls.Add(this.uxAddEditPlayer);
             this.Controls.Add(this.uxTitelLabel);
             this.Name = "Form1";
@@ -138,10 +116,8 @@
 
         private Label uxTitelLabel;
         private Button uxAddEditPlayer;
-        private Button uxAddEditTeam;
         private Button uxLookupPlayer;
         private Button uxLookupTeam;
-        private Button uxAddEditGame;
         private Button uxLookupGame;
         private ComboBox uxLookup;
     }

@@ -1,4 +1,4 @@
-CREATE OR ALTER Procedure [dbo].[prcInsertGames]
+CREATE OR ALTER  Procedure [dbo].[prcInsertGames]
 (@json VARCHAR(MAX) = '')
 AS
 BEGIN
@@ -53,7 +53,7 @@ SELECT TeamId, GameId, PlayerId, PointsScored, PlusMinus,
         PlayerId NVARCHAR(32) '$.PLAYER_ID',
         PointsScored INT '$.PTS',
         PlusMinus INT '$.PLUS_MINUS',
-        [Minutes] INT '$.MIN',
+        [Minutes] DECIMAL '$.MIN',
         FGM INT '$.FGM',
         FGA INT '$.FGA',
         FG3M INT '$.FG3M',
@@ -70,20 +70,20 @@ SELECT TeamId, GameId, PlayerId, PointsScored, PlusMinus,
 END
 GO
 
-
 CREATE OR ALTER Procedure [dbo].[prcInsertPlayers]
 (@json VARCHAR(MAX) = '')
 AS
 BEGIN
 SET IDENTITY_INSERT NBA.Player ON
-INSERT INTO NBA.Player (PlayerId, FirstName, LastName, YearsPlayed, JerseyNumber)
-SELECT PlayerId, FirstName, LastName, Position, CurrentTeam
+INSERT INTO NBA.Player (PlayerId, FirstName, LastName, CurrentTeam, Position)
+SELECT PlayerId, FirstName, LastName, CurrentTeam, Position
 	FROM OPENJSON(@json)
 	WITH (
 		PlayerId INT '$.PERSON_ID',
 		FirstName NVARCHAR(32) '$.FIRST_NAME',
-        Position NVARCHAR(32) '$.POSITION',
-		CurrentTeam NVARCHAR(3) '$.TEAM_ABBREVIATION'
+        LastName NVARCHAR(32) '$.LAST_NAME',
+		CurrentTeam VARCHAR(32) '$.TEAM_ABBREVIATION',
+		Position VARCHAR(32) '$.POSITION'
 	    )
 END
 GO

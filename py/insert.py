@@ -20,7 +20,7 @@ def insertJsonWithProcedure(fileName, procName):
 
 insertJsonWithProcedure('players.json', 'prcInsertPlayers')
 insertJsonWithProcedure('teams.json', 'prcInsertTeams')
-insertJsonWithProcedure('games.json', 'prcInsertGames')
-insertJsonWithProcedure('teamplayergames.json', 'prcInsertGameTeamPlayers')
+insertJsonWithProcedure('games19-22.json', 'prcInsertGames')
+insertJsonWithProcedure('teamplayergames19-22.json', 'prcInsertGameTeamPlayers')
 
 conn.close()

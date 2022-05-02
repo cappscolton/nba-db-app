@@ -1,6 +1,6 @@
 DECLARE @PlayerId1 INT;
 DECLARE @PlayerId2 INT;
-
+-- any player ids here
 SET @PlayerId1 = 1629680
 SET @PlayerId2 = 1629109
 
@@ -8,11 +8,11 @@ SELECT FirstName, LastName, AVG(PointsScored) AS AveragePoints, AVG([Minutes]) A
 INNER JOIN NBA.Player P ON P.PlayerId = GTP.PlayerId
 WHERE GTP.GameId IN
     (
-    SELECT GameId FROM NBA.GameTeamPlayer
+    SELECT GameId FROM NBA.GameTeamPlayer GTP
     WHERE GTP.PlayerId = @PlayerId1
     INTERSECT
-    SELECT GameId FROM NBA.GameTeamPlayer
+    SELECT GameId FROM NBA.GameTeamPlayer GTP
     WHERE GTP.PlayerId = @PlayerId2
     )
 AND (GTP.PlayerId=@PlayerId1 OR GTP.PlayerId=@PlayerId2)
-GROUP BY GTP.PlayerId
+GROUP BY GTP.PlayerId, FirstName, LastName
