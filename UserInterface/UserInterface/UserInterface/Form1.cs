@@ -27,14 +27,6 @@ namespace UserInterface
             uxLookup.DataSource = dtbl;
             uxLookup.DisplayMember = "Name";
             uxLookup.ValueMember = "PlayerId";
-
-            SqlDataAdapter sqlDa1 = new SqlDataAdapter("SELECT S.SeasonScheduleId, S.SeasonYear FROM NBA.SeasonSchedule S", DBConnection.conn);
-            DataTable dtbl1 = new DataTable();
-            sqlDa1.Fill(dtbl1);
-
-            comboBox2.DataSource = dtbl1;
-            comboBox2.DisplayMember = "SeasonYear";
-            comboBox2.ValueMember = "SeasonScheduleId";
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

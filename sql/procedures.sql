@@ -4,7 +4,7 @@ AS
 BEGIN
 SET IDENTITY_INSERT NBA.Game ON
 INSERT INTO NBA.Game (GameId, HomeTeamId, AwayTeamId, SeasonScheduleId, [Date])
-SELECT GameId, HomeTeamId, AwayTeamId, 1, [Date]
+SELECT GameId, HomeTeamId, AwayTeamId, SeasonScheduleId, [Date]
 	FROM OPENJSON(@json)
 	WITH (
 		GameId INT '$.gameId',
@@ -40,17 +40,12 @@ CREATE OR ALTER  Procedure [dbo].[prcInsertGameTeamPlayers]
 AS
 BEGIN
 SET IDENTITY_INSERT NBA.GameTeamPlayer OFF
-<<<<<<< HEAD
-INSERT INTO NBA.GameTeamPlayer (TeamId, GameId, PlayerId, PointsScored)
-SELECT TeamId, GameId, PlayerId, PointsScored
-=======
 INSERT INTO NBA.GameTeamPlayer (TeamId, GameId, PlayerId, PointsScored, PlusMinus,
 								[Minutes], FGM, FGA, FG3M, FG3A, FTM, FTA, OREB, DREB,
 								Assists, Turnovers, Blocks, Fouls)
 SELECT TeamId, GameId, PlayerId, PointsScored, PlusMinus,
 		[Minutes], FGM, FGA, FG3M, FG3A, FTM, FTA, OREB, DREB,
 		Assists, Turnovers, Blocks, Fouls
->>>>>>> origin/schemaV3-changes
 	FROM OPENJSON(@json)
 	WITH (
 		TeamId INT '$.TEAM_ID',
@@ -82,13 +77,13 @@ AS
 BEGIN
 SET IDENTITY_INSERT NBA.Player ON
 INSERT INTO NBA.Player (PlayerId, FirstName, LastName, YearsPlayed, JerseyNumber)
-SELECT PlayerId, FirstName, LastName, 0, JerseyNumber
+SELECT PlayerId, FirstName, LastName, Position, CurrentTeam
 	FROM OPENJSON(@json)
 	WITH (
 		PlayerId INT '$.PERSON_ID',
 		FirstName NVARCHAR(32) '$.FIRST_NAME',
-        LastName NVARCHAR(32) '$.LAST_NAME',
-		JerseyNumber INT '$.JERSEY' -- todo
+        Position NVARCHAR(32) '$.POSITION',
+		CurrentTeam NVARCHAR(3) '$.TEAM_ABBREVIATION'
 	    )
 END
 GO
