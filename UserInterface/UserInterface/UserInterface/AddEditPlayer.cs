@@ -19,6 +19,13 @@ namespace UserInterface
         {
             isEdit = false;
             InitializeComponent();
+
+            SqlDataAdapter sqlDa1 = new SqlDataAdapter("SELECT T.TeamId, T.TeamAbbreviation FROM NBA.Team T", DBConnection.conn);
+            DataTable dtbl1 = new DataTable();
+            sqlDa1.Fill(dtbl1);
+            uxTeamComboBox.DataSource = dtbl1;
+            uxTeamComboBox.DisplayMember = "TeamAbbreviation";
+            uxTeamComboBox.ValueMember = "TeamId";
         }
 
         public AddEditPlayer(int playerId, string firstName, string lastName, string team, string position) // edit constructor

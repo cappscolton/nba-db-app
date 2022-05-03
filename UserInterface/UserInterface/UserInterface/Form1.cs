@@ -16,7 +16,10 @@ namespace UserInterface
     {
         public Form1()
         {
-            DBConnection.conn.Open();
+            if(DBConnection.conn.State != ConnectionState.Open)
+            {
+                DBConnection.conn.Open();
+            }
 
             InitializeComponent();
 
@@ -85,6 +88,13 @@ namespace UserInterface
         {
             Matchups matchups = new Matchups();
             matchups.Show();
+        }
+
+        private void RestoreDefaults(object sender, EventArgs e)
+        {
+            Form1 newView = new Form1();
+            newView.Show();
+            this.Dispose(false);
         }
     }
 }
