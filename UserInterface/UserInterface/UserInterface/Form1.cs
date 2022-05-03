@@ -80,5 +80,11 @@ namespace UserInterface
             PERLeaders perLeaders = new PERLeaders();
             perLeaders.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Matchups matchups = new Matchups();
+            matchups.Show();
+        }
     }
 }

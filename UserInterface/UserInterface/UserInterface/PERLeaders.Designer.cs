@@ -68,14 +68,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(447, 315);
             this.dataGridView1.TabIndex = 4;
             // 
             // PERLeaders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 388);
+            this.ClientSize = new System.Drawing.Size(472, 388);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxSeasonComboBox);
             this.Controls.Add(this.uxExit);

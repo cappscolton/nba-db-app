@@ -41,7 +41,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(397, 315);
             this.dataGridView1.TabIndex = 0;
             // 
             // uxExit
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 387);
+            this.ClientSize = new System.Drawing.Size(429, 387);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxSeasonComboBox);
             this.Controls.Add(this.uxExit);
