@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="UserInterface.AddEditGame">
+    <Position X="6.5" Y="1.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAQACAAQAAAAACAAAADDAgCABAADQAAAACAAAA=</HashCode>
+      <FileName>AddEditGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.AddEditPlayer">
+    <Position X="11.5" Y="1.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAQC2AAABIAAACQQAACAEAAAAAACAAACAAAAAE=</HashCode>
+      <FileName>AddEditPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.DBConnection">
+    <Position X="3.25" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Form1">
+    <Position X="0.5" Y="1.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAQAAQCAAEBAAAACAAQQCAAA4AAABAHAIAACEAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Matchups">
+    <Position X="0.5" Y="11.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAABAQAACAAAACAAgIAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Matchups.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.PERLeaders">
+    <Position X="0.5" Y="15.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACAAIBAAAACQAAACAEgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>PERLeaders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.PlusMinusDisplay">
+    <Position X="0.5" Y="8" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACAAIBAAAACQAAACAEgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>PlusMinusDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.Program">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.ViewGame">
+    <Position X="8.75" Y="12.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACACQggCBAGQAAACAECAAAAEBAAAAAAAEAA=</HashCode>
+      <FileName>ViewGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.ViewGameDisplay">
+    <Position X="7.75" Y="7.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AoABAAAAGiAAIAABAACQAQACAEAAAJBABAAIAAAAEAA=</HashCode>
+      <FileName>ViewGameDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.ViewPlayer">
+    <Position X="13.25" Y="7.25" Width="6" />
+    <InheritanceLine Type="System.Windows.Forms.Form" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="6.969" />
+        <Point X="3.967" Y="6.969" Type="JumpStart" />
+        <Point X="4.133" Y="6.969" Type="JumpEnd" />
+        <Point X="10.167" Y="6.969" Type="JumpStart" />
+        <Point X="10.333" Y="6.969" Type="JumpEnd" />
+        <Point X="13.096" Y="6.969" />
+        <Point X="13.096" Y="11.588" />
+        <Point X="16.464" Y="11.588" />
+        <Point X="16.464" Y="11.434" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQCcAAABAAAAAQEABCAAAAAAAAAAAACAAAAAE=</HashCode>
+      <FileName>ViewPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface.ViewTeam">
+    <Position X="13.75" Y="11.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAACAAAAAoBAiQBAADBEAAAAABIAAABBAAAKk=</HashCode>
+      <FileName>ViewTeam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
