@@ -42,10 +42,10 @@ BEGIN
 SET IDENTITY_INSERT NBA.GameTeamPlayer OFF
 INSERT INTO NBA.GameTeamPlayer (TeamId, GameId, PlayerId, PointsScored, PlusMinus,
 								[Minutes], FGM, FGA, FG3M, FG3A, FTM, FTA, OREB, DREB,
-								Assists, Turnovers, Blocks, Fouls)
+								Assists, Turnovers, Steals, Blocks, Fouls)
 SELECT TeamId, GameId, PlayerId, PointsScored, PlusMinus,
 		[Minutes], FGM, FGA, FG3M, FG3A, FTM, FTA, OREB, DREB,
-		Assists, Turnovers, Blocks, Fouls
+		Assists, Turnovers, Steals, Blocks, Fouls
 	FROM OPENJSON(@json)
 	WITH (
 		TeamId INT '$.TEAM_ID',
@@ -64,6 +64,7 @@ SELECT TeamId, GameId, PlayerId, PointsScored, PlusMinus,
         DREB INT '$.DREB',
         Assists INT '$.AST',
         Turnovers INT '$.TOV',
+		Steals INT '$.STL',
         Blocks INT '$.BLK',
         Fouls INT '$.PF'
 	    )

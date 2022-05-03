@@ -34,6 +34,9 @@
             this.uxLookupTeam = new System.Windows.Forms.Button();
             this.uxLookupGame = new System.Windows.Forms.Button();
             this.uxLookup = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxTitelLabel
@@ -93,11 +96,43 @@
             this.uxLookup.Size = new System.Drawing.Size(121, 23);
             this.uxLookup.TabIndex = 8;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 94);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "PlusMinus Rankings";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(141, 94);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "PER Leaders";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(270, 94);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(123, 23);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Matchup Stats";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 129);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.uxLookup);
             this.Controls.Add(this.uxLookupGame);
             this.Controls.Add(this.uxLookupTeam);
@@ -120,5 +155,8 @@
         private Button uxLookupTeam;
         private Button uxLookupGame;
         private ComboBox uxLookup;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }

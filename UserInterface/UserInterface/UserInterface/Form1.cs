@@ -68,5 +68,17 @@ namespace UserInterface
             AddEditPlayer player = new AddEditPlayer();
             player.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PlusMinusDisplay plusMinusDisplay = new PlusMinusDisplay();
+            plusMinusDisplay.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PERLeaders perLeaders = new PERLeaders();
+            perLeaders.Show();
+        }
     }
 }

@@ -85,6 +85,7 @@ CREATE TABLE NBA.GameTeamPlayer
     DREB INT NOT NULL,
     Assists INT NOT NULL,
     Turnovers INT NOT NULL,
+    Steals INT NOT NULL,
     Blocks INT NOT NULL,
     Fouls INT NOT NULL
 );
