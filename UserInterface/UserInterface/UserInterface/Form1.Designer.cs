@@ -37,6 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.uxReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxTitelLabel
@@ -126,11 +127,22 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // uxReset
+            // 
+            this.uxReset.Location = new System.Drawing.Point(334, 60);
+            this.uxReset.Name = "uxReset";
+            this.uxReset.Size = new System.Drawing.Size(57, 23);
+            this.uxReset.TabIndex = 29;
+            this.uxReset.Text = "Reset";
+            this.uxReset.UseVisualStyleBackColor = true;
+            this.uxReset.Click += new System.EventHandler(this.RestoreDefaults);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 129);
+            this.Controls.Add(this.uxReset);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -159,5 +171,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button uxReset;
     }
 }
